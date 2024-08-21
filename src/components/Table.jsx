@@ -1,9 +1,9 @@
 
 const Table = ({ sat }) => {
-  const operationStatus = (operational) => {
-    if (operational) {
+  const operationStatus = (operationalStatus) => {
+    if (operationalStatus) {
       return "Active";
-    } else if (!operational) {
+    } else if (!operationalStatus) {
       return "Inactive";
     }
   }
@@ -22,6 +22,7 @@ const Table = ({ sat }) => {
 
         {sat.map((data, id) => {
           return (
+            
             <tr key={id}>
               <td>{data.name}</td>
               <td>{data.type}</td>
