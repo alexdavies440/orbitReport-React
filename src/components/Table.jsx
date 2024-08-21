@@ -1,3 +1,4 @@
+import styling from "./styling.css";
 
 const Table = ({ sat }) => {
   const operationStatus = (operationalStatus) => {
