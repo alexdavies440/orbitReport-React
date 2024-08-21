@@ -1,4 +1,12 @@
+
 const Table = ({ sat }) => {
+  const operationStatus = (operational) => {
+    if (operational) {
+      return "Active";
+    } else if (!operational) {
+      return "Inactive";
+    }
+  }
   return (
     <table>
       <thead>
@@ -18,9 +26,9 @@ const Table = ({ sat }) => {
               <td>{data.name}</td>
               <td>{data.type}</td>
               <td>{data.launchDate}</td>
-              <td>{data.operational}</td>
+              <td>{operationStatus(data.operational)}</td>
             </tr>
-          )
+          );
         })}
 
 
