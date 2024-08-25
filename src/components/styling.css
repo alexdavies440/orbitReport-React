@@ -17,6 +17,11 @@ button {
   font-weight: bold;
 }
 
+button:hover {
+  background-color: #70b4fd;
+  text-shadow: 0 0 10px #4d7bad;
+}
+
 .flex-container {
   display: flex;
   justify-content: center;
