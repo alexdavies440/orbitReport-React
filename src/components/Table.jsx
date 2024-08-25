@@ -1,13 +1,9 @@
 import styling from "./styling.css";
 
 const Table = ({ sat }) => {
-  const operationStatus = (operationalStatus) => {
-    if (operationalStatus) {
-      return "Active";
-    } else if (!operationalStatus) {
-      return "Inactive";
-    }
-  }
+  const operationStatus = (operationalStatus) => 
+    operationalStatus === true ? "Active" : "Inactive";
+  
   return (
     <table>
       <thead>
@@ -23,7 +19,6 @@ const Table = ({ sat }) => {
 
         {sat.map((data, id) => {
           return (
-            
             <tr key={id}>
               <td>{data.name}</td>
               <td>{data.type}</td>
