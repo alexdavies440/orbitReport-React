@@ -4,9 +4,9 @@ import satData from "./satData";
 const Buttons = ({ filterByType, setSat, orbitTypes }) => {
   return (
       <div className="flex-container">
-        {orbitTypes.map((type, index) => {
+        {orbitTypes.map((type, id) => {
           return (
-            <button onClick={() => filterByType(type)} key={index}>
+            <button onClick={() => filterByType(type)} key={id}>
               {type} Orbit
             </button>
           );
